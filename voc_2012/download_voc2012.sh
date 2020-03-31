@@ -27,3 +27,7 @@ BASE_URL="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/"
 FILENAME="VOCtrainval_11-May-2012.tar"
 
 download_and_uncompress "${BASE_URL}" "${FILENAME}"
+
+# Downloading the augmented annotations
+AUGMENTED_ANNOTATIONS_URL="https://www.dropbox.com/s/oeu149j8qtbs1x0/SegmentationClassAug.zip?dl=1"
+wget "$AUGMENTED_ANNOTATIONS_URL"
