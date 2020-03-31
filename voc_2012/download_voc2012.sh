@@ -29,5 +29,16 @@ FILENAME="VOCtrainval_11-May-2012.tar"
 download_and_uncompress "${BASE_URL}" "${FILENAME}"
 
 # Downloading the augmented annotations
+echo "Downloading augmented annotations..."
 AUGMENTED_ANNOTATIONS_URL="https://www.dropbox.com/s/oeu149j8qtbs1x0/SegmentationClassAug.zip?dl=1"
 wget "$AUGMENTED_ANNOTATIONS_URL"
+echo "Augmented annotations downloaded!"
+
+FILENAME="SegmentationClassAug.zip?dl=1"
+NEW_FILENAME="SegmentationClassAug.zip"
+
+mv $FILENAME $NEW_FILENAME
+echo "Extracting downloaded annotations..."
+unzip $NEW_FILENAME
+echo "Downloaded annotations extracted."
+rm -rf __MACOSX
