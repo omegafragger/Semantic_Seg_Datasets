@@ -42,3 +42,8 @@ echo "Extracting downloaded annotations..."
 unzip $NEW_FILENAME
 echo "Downloaded annotations extracted."
 rm -rf __MACOSX
+
+# Move the augmented annotations inside the root folder
+EXTRACTED_ANNOTATION_FOLDER="SegmentationClassAug"
+DATA_FOLDER="./VOCdevkit/VOC2012"
+mv $EXTRACTED_ANNOTATION_FOLDER $DATA_FOLDER
